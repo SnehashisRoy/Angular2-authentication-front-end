@@ -1,0 +1,17 @@
+<form (ngSubmit)=login()>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" name="email" class= "form-control"  
+    [(ngModel)]="credential.username">
+  </div>
+  <div class="form-group">
+    <label for="password">Email</label>
+    <input  type="password" name="password" class= "form-control"
+     [(ngModel)]="credential.password">
+  </div>
+    <div *ngIf="errorMessage"class= "alert alert-danger">{{errorMessage}}</div>
+  <div class="form-group">
+    <button type="submit">Login</button>
+  </div>
+
+</form>

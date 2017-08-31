@@ -1,0 +1,18 @@
+<div class="jumbotron text-center">
+  <h1>Users</h1>
+  <button class="btn btn-success"[routerLink]="['/users/create']">Create User</button>
+</div>
+
+<div class="user-list row" *ngIf="users">
+
+  <div class="col-sm-4" *ngFor="let user of users">
+
+    <div class="user-card text-center">
+       <h2 [routerLink]="['/users', user.id]" style="cursor: pointer">{{ user.name }}</h2>
+       <a (click)=deleteUser(user.id)><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+    </div>
+    
+
+  </div>
+
+</div>

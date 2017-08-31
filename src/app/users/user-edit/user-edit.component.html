@@ -1,0 +1,26 @@
+<div *ngIf="userNew">
+  <form (ngSubmit)=updateUser()>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]= "userNew.name" >
+    </div>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="text" class="form-control" name="email" [(ngModel)]= "userNew.email" >
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password"[(ngModel)]= "userNew.password">
+    </div>
+    <div class="form-group">
+      <label for="password_confirmation">Confirm Password</label>
+      <input type="password" class="form-control" name="password_confirmation" [(ngModel)]= "userNew.password_confirmation">
+    </div> 
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <div *ngIf="SuccessMessage" class="alert alert-success">{{ SuccessMessage }}</div>
+  <div *ngIf="ErrorMessage" class="alert alert-danger">{{ ErrorMessage }}</div>
+
+<div>
+  
